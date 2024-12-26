@@ -105,7 +105,7 @@ void startTournement(vector<Equipe>& equipes) {
     for (int i = 0; i < 8; ++i) {
         cout << "Groupe " << (i + 1) << " : " << tournoi[i*2].getNomEquipe() << " vs " << tournoi[i*2+1].getNomEquipe() << endl;
     }
-
+//shuffe shuffels mabinat elements f vecteur 
     // Phase éliminatoire
     std::vector<Equipe> phaseFinale(tournoi.begin(), tournoi.begin() + 8);
     std::shuffle(phaseFinale.begin(), phaseFinale.end(), std::default_random_engine(std::time(0)));
@@ -114,7 +114,8 @@ void startTournement(vector<Equipe>& equipes) {
     for (size_t i = 0; i < phaseFinale.size(); i += 2) {
         cout << phaseFinale[i].getNomEquipe() << " vs " << phaseFinale[i+1].getNomEquipe() << endl;
     }
-
+//easter egg a zebi 
+    
     // Terminer le tournoi
     while (phaseFinale.size() > 1) {
         std::vector<Equipe> nextRound;
